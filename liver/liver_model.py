@@ -27,4 +27,4 @@ clf_report = classification_report(y_test, y_pred)
 
 print(clf_report)
 
-pickle.dump(model, open('../app/liver_model.pkl', 'wb'))
+pickle.dump(model, open('../app/pages/liver_model.pkl', 'wb'))

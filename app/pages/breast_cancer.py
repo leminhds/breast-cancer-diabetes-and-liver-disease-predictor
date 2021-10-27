@@ -1,8 +1,7 @@
 import streamlit as st
-import awesome_streamlit as ast
 import pickle
 import numpy as np
-from pathlib import Path
+
 
 
 def write():
@@ -11,9 +10,7 @@ def write():
     """
     st.title('Breast Cancer Prediction')
 
-    path = Path('../cancer_model.pkl')
-
-    xgb_pickle = open(path, 'rb')
+    xgb_pickle = open('cancer_model.pkl', 'rb')
     xgb = pickle.load(xgb_pickle)
     xgb_pickle.close()
 
