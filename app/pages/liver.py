@@ -8,9 +8,9 @@ def write():
     """
         write content to this app
         """
-    st.title('Diabetes Prediction')
+    st.title('Liver Prediction')
 
-    with open('breast-cancer-diabetes-and-liver-disease-predictor/app/pages/liver_model.pkl', 'rb') as handle:
+    with open('liver_model.pkl', 'rb') as handle:
         data = handle.read()
     xgb = pickle.load(data)
 
