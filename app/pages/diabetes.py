@@ -9,7 +9,7 @@ def write():
         """
     st.title('Diabetes Prediction')
 
-    xgb_pickle = open('./pages/diabetes_model.pkl', 'rb')
+    xgb_pickle = open('diabetes_model.pkl', 'rb')
     xgb = pickle.load(xgb_pickle)
     xgb_pickle.close()
 
