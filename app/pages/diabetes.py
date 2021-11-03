@@ -2,6 +2,10 @@ import streamlit as st
 import pickle
 
 import numpy as np
+from pathlib import Path
+
+
+pkl_path = Path(__file__).parents[1] / 'pages/diabetes_model.pkl'
 
 def write():
     """

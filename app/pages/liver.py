@@ -13,13 +13,11 @@ def write():
         """
     st.title('Liver Prediction')
 
-    with open(pkl_path, 'rb') as handle:
-        data = handle.read()
-    xgb = pickle.load(data)
+    xgb_pickle = open(pkl_path, 'rb')
+    xgb = pickle.load(xgb_pickle)
+    xgb_pickle.close()
 
-    # xgb_pickle = open('./pages/liver_model.pkl', 'rb')
-    # xgb = pickle.load(xgb_pickle)
-    # xgb_pickle.close()
+
 
     st.subheader('Put in your values below so that our AI can give a prediction '
                  'on whether you might have liver disease')
