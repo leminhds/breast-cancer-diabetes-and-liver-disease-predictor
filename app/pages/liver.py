@@ -2,6 +2,9 @@ import streamlit as st
 import pickle
 
 import numpy as np
+from pathlib import Path
+
+pkl_path = Path(__file__).parents[1] / 'pages/liver_model.pkl'
 
 
 def write():
@@ -10,7 +13,7 @@ def write():
         """
     st.title('Liver Prediction')
 
-    with open('liver_model.pkl', 'rb') as handle:
+    with open(pkl_path, 'rb') as handle:
         data = handle.read()
     xgb = pickle.load(data)
 
